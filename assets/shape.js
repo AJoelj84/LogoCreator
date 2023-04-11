@@ -35,4 +35,4 @@ class Circle {
         return `<circle cx="150" cy="100" r="75" fill="${this.color}" />`;
     }
 }
-module.exports = { Triangle, Rectangle, Circle }
+module.exports = { Circle, Rectangle, Triangle }
