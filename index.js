@@ -35,7 +35,7 @@ const fileName = `logo_${Date.now()}.svg`;
         ])
 
                 .then((answers) => {
-                    console.log('Thank You!')
+                    console.log('Thank You Generating Logo!')
                     logoCreator(answers.text, answers.charColor, answers.shape, answers.backColor);
                 })
                     .catch((error)=>{
@@ -47,29 +47,34 @@ const fileName = `logo_${Date.now()}.svg`;
                         }
                     });
 
-
+let textX =('');
+let textY =('');
 const logoCreator = function(text, charColor, shape, backColor){
     console.log("start function");
     if (shape == "Triangle"){
         var logoShape = new Triangle();
         logoShape.setColor(backColor);
+        textX = '95';
+        textY = '150';
     }
     else if (shape == "Rectangle"){
         var logoShape = new Rectangle();
         logoShape.setColor(backColor);
+        textX = '90';
+        textY = '115';
     }
     else if (shape == "Circle"){
         var logoShape = new Circle();
         logoShape.setColor(backColor);
+        textX = '105';
+        textY = '120';
     }
-    console.log(logoShape.render());
-    console.log(text);
-                    
+                       
 var createdLogo = 
 `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" version="1.1"  style="background-color:white">
 ${logoShape.render()}
-<text x="108" y="120" font-size="50" fill="${charColor}">${text}</text>
+<text x="${textX}" y="${textY}" font-size="50" fill="${charColor}">${text}</text>
 </svg>`
         fs.writeFile(`./examples/${fileName}`, createdLogo, (err) => {
             if (err) {
