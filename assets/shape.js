@@ -7,7 +7,7 @@ class Triangle {
         this.color = color;
     }
     render() {
-        return `<polygon points="150, 18 244, 182 56, 182" fill="${this.color} stroke: black; stroke-width: 2px;" />`;
+        return `<polygon points="150, 18 244, 182 56, 182" fill="${this.color}" />`;
     }
 }
 

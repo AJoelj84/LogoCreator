@@ -9,7 +9,7 @@
 
 [Video-Demo](#video-demo)
 
-[Screenshots]
+[Screenshots](#screenshots)
 
 # Installation and Usage
     Copy The Files in the Repository and use node index.js and follow the simple prompts
@@ -21,6 +21,7 @@ https://github.com/AJoelj84
 ajoelj84@gmail.com
 
 # Video Demo
+https://drive.google.com/file/d/1Wb8uJvYFbqxnG7qq6b1pPK8Q9qw6pLIP/view?usp=sharing
 
 # Screenshots
 ![Alt text](assets/circle%20logo.jpg)
