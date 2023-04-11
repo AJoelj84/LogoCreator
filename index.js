@@ -2,7 +2,7 @@ const inquirer = require ('inquirer');
 
 const fs = require ('fs');
 
-const {Circle, Rectangle, Triangle} = require('./assets/shape.js');
+const {Circle, Rectangle, Triangle} = require('./lib/shape.js');
 
 const fileName = `logo_${Date.now()}.svg`;
 
