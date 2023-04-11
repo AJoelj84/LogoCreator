@@ -76,7 +76,7 @@ var createdLogo =
 ${logoShape.render()}
 <text x="${textX}" y="${textY}" font-size="50" fill="${charColor}">${text}</text>
 </svg>`
-        fs.writeFile(`./examples/${fileName}`, createdLogo, (err) => {
+        fs.writeFile(`./logos/${fileName}`, createdLogo, (err) => {
             if (err) {
             console.error(err);
             }
