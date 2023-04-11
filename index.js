@@ -2,8 +2,9 @@ const inquirer = require ('inquirer');
 
 const fs = require ('fs');
 
-const {Circle, Rectangle, Triangle} = require('/assets/shape.js');
+const {Circle, Rectangle, Triangle} = require('./assets/shape.js');
 
+const fileName = `logo_${Date.now()}.svg`;
 
     inquirer
         .prompt([
@@ -46,7 +47,7 @@ const {Circle, Rectangle, Triangle} = require('/assets/shape.js');
                         }
                     });
 
-                    
+
 const logoCreator = function(text, charColor, shape, backColor){
     console.log("start function");
     if (shape == "Triangle"){
@@ -64,16 +65,16 @@ const logoCreator = function(text, charColor, shape, backColor){
     console.log(logoShape.render());
     console.log(text);
                     
-var createdLogo = `
-            <?xml version="1.0" standalone="no"?>
-            <svg width="300" height="200" version="1.1" xmlns="LOGO" style="background-color:white">
-            ${logoShape.render()}
-            <text x="108" y="120" font-size="50" fill="${charColor}">${text}</text>
-            `
-    fs.writeFile('./examples/logo.svg', createdLogo,(err)=> {
-        if (err){
+var createdLogo = 
+`<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" version="1.1"  style="background-color:white">
+${logoShape.render()}
+<text x="108" y="120" font-size="50" fill="${charColor}">${text}</text>
+</svg>`
+        fs.writeFile(`./examples/${fileName}`, createdLogo, (err) => {
+            if (err) {
             console.error(err);
-                }
+            }
         });
 console.log("done");
   }
