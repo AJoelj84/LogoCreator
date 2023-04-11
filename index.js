@@ -1,11 +1,13 @@
+// Variables for usage of Inquirer, fs, and Shapes
 const inquirer = require ('inquirer');
-
 const fs = require ('fs');
-
 const {Circle, Rectangle, Triangle} = require('./lib/shape.js');
 
+// Variable To Create Unique Logo names and So that Previously Made Logos are Not Deleted
 const fileName = `logo_${Date.now()}.svg`;
 
+
+// Inquirer Prompt for Questions on Logo Creation
     inquirer
         .prompt([
             {
@@ -47,6 +49,7 @@ const fileName = `logo_${Date.now()}.svg`;
                         }
                     });
 
+//Variables to Set Text height and To Set What Shape, and Its Colors are Being Generated 
 let textX =('');
 let textY =('');
 const logoCreator = function(text, charColor, shape, backColor){
@@ -69,7 +72,7 @@ const logoCreator = function(text, charColor, shape, backColor){
         textX = '105';
         textY = '120';
     }
-                       
+//Variable for Creation Of Logo, and the fs function to Write the new SVG logo Files    
 var createdLogo = 
 `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" version="1.1"  style="background-color:white">
